@@ -38,3 +38,6 @@ sh refresh-data.sh
 * Create a new dashboard using the JSON file in this repository(http://localhost:3000/dashboard/import).
 
 * You should bow be able to see the most recent data plotted in your dashboard.
+
+## Preview image
+![](grafana-dashboard-preview.png)
