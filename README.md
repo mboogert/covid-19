@@ -5,6 +5,9 @@ This project uses docker-compose and some custom scripting to create an InfluxDB
 
 Using the `refresh-data.sh` script, the latest data is pulled from Our World in Data website(https://ourworldindata.org/coronavirus-source-data).
 
+## Preview image
+![](grafana-dashboard-preview.png)
+
 ## Howto
 
 * Clone the repository.
@@ -38,6 +41,3 @@ sh refresh-data.sh
 * Create a new dashboard using the JSON file in this repository(http://localhost:3000/dashboard/import).
 
 * You should bow be able to see the most recent data plotted in your dashboard.
-
-## Preview image
-![](grafana-dashboard-preview.png)
