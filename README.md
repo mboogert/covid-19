@@ -31,4 +31,10 @@ sh refresh-data.sh
 
 * Enter the default username `admin` and password `admin`. After succesful logon you're prompted to change the password.
 
-*
+* Add a new InfluxDB datasource with the following details(http://localhost:3000/datasources/new).
+> * URL: http://influxdb:8086
+> * Database: covid-19
+
+* Create a new dashboard using the JSON file in this repository(http://localhost:3000/dashboard/import).
+
+* You should bow be able to see the most recent data plotted in your dashboard.
