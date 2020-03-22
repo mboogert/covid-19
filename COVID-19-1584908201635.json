@@ -1,0 +1,2158 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "$$hashKey": "object:57",
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 1,
+  "iteration": 1584907714044,
+  "links": [],
+  "panels": [
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 10,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "decimals": 0,
+          "description": "https://ourworldindata.org/coronavirus-source-data",
+          "fill": 1,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 10,
+            "w": 24,
+            "x": 0,
+            "y": 1
+          },
+          "hiddenSeries": false,
+          "id": 2,
+          "interval": "",
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": false,
+            "min": false,
+            "rightSide": false,
+            "show": true,
+            "sort": "current",
+            "sortDesc": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "nullPointMode": "null",
+          "options": {
+            "dataLinks": []
+          },
+          "percentage": false,
+          "pointradius": 2,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "[[tag_location]] total deaths",
+              "groupBy": [
+                {
+                  "params": [
+                    "$__interval"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "location"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "previous"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "measurement": "value",
+              "orderByTime": "ASC",
+              "policy": "default",
+              "refId": "A",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "total_deaths"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "location",
+                  "operator": "=~",
+                  "value": "/^$Country$/"
+                }
+              ]
+            },
+            {
+              "alias": "[[tag_location]] total cases",
+              "groupBy": [
+                {
+                  "params": [
+                    "$__interval"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "location"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "previous"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "measurement": "value",
+              "orderByTime": "ASC",
+              "policy": "default",
+              "refId": "B",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "total_cases"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "location",
+                  "operator": "=~",
+                  "value": "/^$Country$/"
+                }
+              ]
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "Totals",
+          "tooltip": {
+            "shared": true,
+            "sort": 2,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "$$hashKey": "object:164",
+              "decimals": 0,
+              "format": "none",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": "0",
+              "show": true
+            },
+            {
+              "$$hashKey": "object:165",
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "decimals": 0,
+          "description": "https://ourworldindata.org/coronavirus-source-data",
+          "fill": 1,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 10,
+            "w": 24,
+            "x": 0,
+            "y": 11
+          },
+          "hiddenSeries": false,
+          "id": 11,
+          "interval": "",
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": false,
+            "min": false,
+            "rightSide": false,
+            "show": true,
+            "sort": "current",
+            "sortDesc": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "nullPointMode": "null",
+          "options": {
+            "dataLinks": []
+          },
+          "percentage": false,
+          "pointradius": 2,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "[[tag_location]] new deaths",
+              "groupBy": [
+                {
+                  "params": [
+                    "$__interval"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "location"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "previous"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "measurement": "value",
+              "orderByTime": "ASC",
+              "policy": "default",
+              "refId": "A",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "new_deaths"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "location",
+                  "operator": "=~",
+                  "value": "/^$Country$/"
+                }
+              ]
+            },
+            {
+              "alias": "[[tag_location]] new cases",
+              "groupBy": [
+                {
+                  "params": [
+                    "$__interval"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "location"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "previous"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "measurement": "value",
+              "orderByTime": "ASC",
+              "policy": "default",
+              "refId": "B",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "new_cases"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "location",
+                  "operator": "=~",
+                  "value": "/^$Country$/"
+                }
+              ]
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "Daily",
+          "tooltip": {
+            "shared": true,
+            "sort": 2,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "$$hashKey": "object:164",
+              "decimals": 0,
+              "format": "none",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": "0",
+              "show": true
+            },
+            {
+              "$$hashKey": "object:165",
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        }
+      ],
+      "title": "Overview",
+      "type": "row"
+    },
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 1
+      },
+      "id": 8,
+      "panels": [],
+      "title": "Detail",
+      "type": "row"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "decimals": 0,
+      "description": "https://ourworldindata.org/coronavirus-source-data",
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 2
+      },
+      "hiddenSeries": false,
+      "id": 6,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": false,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "[[tag_location]]",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "location"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "previous"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "value",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "total_deaths"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "location",
+              "operator": "=~",
+              "value": "/^$Country$/"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Deaths",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:164",
+          "decimals": 0,
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        },
+        {
+          "$$hashKey": "object:165",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "decimals": 0,
+      "description": "https://ourworldindata.org/coronavirus-source-data",
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 10
+      },
+      "hiddenSeries": false,
+      "id": 3,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": false,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "[[tag_location]]",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "location"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "previous"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "value",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "new_cases"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "location",
+              "operator": "=~",
+              "value": "/^$Country$/"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "New cases",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:164",
+          "decimals": 0,
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        },
+        {
+          "$$hashKey": "object:165",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "decimals": 0,
+      "description": "https://ourworldindata.org/coronavirus-source-data",
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 18
+      },
+      "hiddenSeries": false,
+      "id": 4,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": false,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 0.5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "[[tag_location]]",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "location"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "previous"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "value",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "new_deaths"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "location",
+              "operator": "=~",
+              "value": "/^$Country$/"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "New deaths",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:164",
+          "decimals": 0,
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        },
+        {
+          "$$hashKey": "object:165",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "decimals": 0,
+      "description": "https://ourworldindata.org/coronavirus-source-data",
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 26
+      },
+      "hiddenSeries": false,
+      "id": 5,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": false,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "[[tag_location]]",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "location"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "previous"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "value",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "total_cases"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "location",
+              "operator": "=~",
+              "value": "/^$Country$/"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Total cases",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:164",
+          "decimals": 0,
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        },
+        {
+          "$$hashKey": "object:165",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    }
+  ],
+  "schemaVersion": 22,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "allValue": null,
+        "current": {
+          "text": "Belgium + France + Germany + Greece + Ireland + Netherlands + United Kingdom",
+          "value": [
+            "Belgium",
+            "France",
+            "Germany",
+            "Greece",
+            "Ireland",
+            "Netherlands",
+            "United Kingdom"
+          ]
+        },
+        "datasource": "InfluxDB",
+        "definition": "show tag values from value with key = \"location\"",
+        "hide": 0,
+        "includeAll": true,
+        "index": -1,
+        "label": null,
+        "multi": true,
+        "name": "Country",
+        "options": [
+          {
+            "$$hashKey": "object:705",
+            "selected": false,
+            "text": "All",
+            "value": "$__all"
+          },
+          {
+            "$$hashKey": "object:706",
+            "selected": false,
+            "text": "Afghanistan",
+            "value": "Afghanistan"
+          },
+          {
+            "$$hashKey": "object:707",
+            "selected": false,
+            "text": "Albania",
+            "value": "Albania"
+          },
+          {
+            "$$hashKey": "object:708",
+            "selected": false,
+            "text": "Algeria",
+            "value": "Algeria"
+          },
+          {
+            "$$hashKey": "object:709",
+            "selected": false,
+            "text": "Andorra",
+            "value": "Andorra"
+          },
+          {
+            "$$hashKey": "object:710",
+            "selected": false,
+            "text": "Angola",
+            "value": "Angola"
+          },
+          {
+            "$$hashKey": "object:711",
+            "selected": false,
+            "text": "Antigua and Barbuda",
+            "value": "Antigua and Barbuda"
+          },
+          {
+            "$$hashKey": "object:712",
+            "selected": false,
+            "text": "Argentina",
+            "value": "Argentina"
+          },
+          {
+            "$$hashKey": "object:713",
+            "selected": false,
+            "text": "Armenia",
+            "value": "Armenia"
+          },
+          {
+            "$$hashKey": "object:714",
+            "selected": false,
+            "text": "Australia",
+            "value": "Australia"
+          },
+          {
+            "$$hashKey": "object:715",
+            "selected": false,
+            "text": "Austria",
+            "value": "Austria"
+          },
+          {
+            "$$hashKey": "object:716",
+            "selected": false,
+            "text": "Azerbaijan",
+            "value": "Azerbaijan"
+          },
+          {
+            "$$hashKey": "object:717",
+            "selected": false,
+            "text": "Bahamas",
+            "value": "Bahamas"
+          },
+          {
+            "$$hashKey": "object:718",
+            "selected": false,
+            "text": "Bahrain",
+            "value": "Bahrain"
+          },
+          {
+            "$$hashKey": "object:719",
+            "selected": false,
+            "text": "Bangladesh",
+            "value": "Bangladesh"
+          },
+          {
+            "$$hashKey": "object:720",
+            "selected": false,
+            "text": "Barbados",
+            "value": "Barbados"
+          },
+          {
+            "$$hashKey": "object:721",
+            "selected": false,
+            "text": "Belarus",
+            "value": "Belarus"
+          },
+          {
+            "$$hashKey": "object:722",
+            "selected": true,
+            "text": "Belgium",
+            "value": "Belgium"
+          },
+          {
+            "$$hashKey": "object:723",
+            "selected": false,
+            "text": "Benin",
+            "value": "Benin"
+          },
+          {
+            "$$hashKey": "object:724",
+            "selected": false,
+            "text": "Bermuda",
+            "value": "Bermuda"
+          },
+          {
+            "$$hashKey": "object:51",
+            "selected": false,
+            "text": "Bhutan",
+            "value": "Bhutan"
+          },
+          {
+            "$$hashKey": "object:52",
+            "selected": false,
+            "text": "Bolivia",
+            "value": "Bolivia"
+          },
+          {
+            "$$hashKey": "object:53",
+            "selected": false,
+            "text": "Bosnia and Herzegovina",
+            "value": "Bosnia and Herzegovina"
+          },
+          {
+            "$$hashKey": "object:54",
+            "selected": false,
+            "text": "Brazil",
+            "value": "Brazil"
+          },
+          {
+            "$$hashKey": "object:55",
+            "selected": false,
+            "text": "Brunei",
+            "value": "Brunei"
+          },
+          {
+            "$$hashKey": "object:56",
+            "selected": false,
+            "text": "Bulgaria",
+            "value": "Bulgaria"
+          },
+          {
+            "$$hashKey": "object:57",
+            "selected": false,
+            "text": "Burkina Faso",
+            "value": "Burkina Faso"
+          },
+          {
+            "$$hashKey": "object:58",
+            "selected": false,
+            "text": "Cambodia",
+            "value": "Cambodia"
+          },
+          {
+            "$$hashKey": "object:59",
+            "selected": false,
+            "text": "Cameroon",
+            "value": "Cameroon"
+          },
+          {
+            "$$hashKey": "object:60",
+            "selected": false,
+            "text": "Canada",
+            "value": "Canada"
+          },
+          {
+            "$$hashKey": "object:61",
+            "selected": false,
+            "text": "Cape Verde",
+            "value": "Cape Verde"
+          },
+          {
+            "$$hashKey": "object:62",
+            "selected": false,
+            "text": "Cayman Islands",
+            "value": "Cayman Islands"
+          },
+          {
+            "$$hashKey": "object:63",
+            "selected": false,
+            "text": "Central African Republic",
+            "value": "Central African Republic"
+          },
+          {
+            "$$hashKey": "object:64",
+            "selected": false,
+            "text": "Chad",
+            "value": "Chad"
+          },
+          {
+            "$$hashKey": "object:65",
+            "selected": false,
+            "text": "Chile",
+            "value": "Chile"
+          },
+          {
+            "$$hashKey": "object:66",
+            "selected": false,
+            "text": "China",
+            "value": "China"
+          },
+          {
+            "$$hashKey": "object:67",
+            "selected": false,
+            "text": "Colombia",
+            "value": "Colombia"
+          },
+          {
+            "$$hashKey": "object:68",
+            "selected": false,
+            "text": "Congo",
+            "value": "Congo"
+          },
+          {
+            "$$hashKey": "object:69",
+            "selected": false,
+            "text": "Costa Rica",
+            "value": "Costa Rica"
+          },
+          {
+            "$$hashKey": "object:70",
+            "selected": false,
+            "text": "Cote d'Ivoire",
+            "value": "Cote d'Ivoire"
+          },
+          {
+            "$$hashKey": "object:71",
+            "selected": false,
+            "text": "Croatia",
+            "value": "Croatia"
+          },
+          {
+            "$$hashKey": "object:72",
+            "selected": false,
+            "text": "Cuba",
+            "value": "Cuba"
+          },
+          {
+            "$$hashKey": "object:73",
+            "selected": false,
+            "text": "Cyprus",
+            "value": "Cyprus"
+          },
+          {
+            "$$hashKey": "object:74",
+            "selected": false,
+            "text": "Czech Republic",
+            "value": "Czech Republic"
+          },
+          {
+            "$$hashKey": "object:75",
+            "selected": false,
+            "text": "Democratic Republic of Congo",
+            "value": "Democratic Republic of Congo"
+          },
+          {
+            "$$hashKey": "object:76",
+            "selected": false,
+            "text": "Denmark",
+            "value": "Denmark"
+          },
+          {
+            "$$hashKey": "object:77",
+            "selected": false,
+            "text": "Djibouti",
+            "value": "Djibouti"
+          },
+          {
+            "$$hashKey": "object:78",
+            "selected": false,
+            "text": "Dominican Republic",
+            "value": "Dominican Republic"
+          },
+          {
+            "$$hashKey": "object:79",
+            "selected": false,
+            "text": "Ecuador",
+            "value": "Ecuador"
+          },
+          {
+            "$$hashKey": "object:80",
+            "selected": false,
+            "text": "Egypt",
+            "value": "Egypt"
+          },
+          {
+            "$$hashKey": "object:81",
+            "selected": false,
+            "text": "El Salvador",
+            "value": "El Salvador"
+          },
+          {
+            "$$hashKey": "object:82",
+            "selected": false,
+            "text": "Equatorial Guinea",
+            "value": "Equatorial Guinea"
+          },
+          {
+            "$$hashKey": "object:83",
+            "selected": false,
+            "text": "Eritrea",
+            "value": "Eritrea"
+          },
+          {
+            "$$hashKey": "object:84",
+            "selected": false,
+            "text": "Estonia",
+            "value": "Estonia"
+          },
+          {
+            "$$hashKey": "object:85",
+            "selected": false,
+            "text": "Ethiopia",
+            "value": "Ethiopia"
+          },
+          {
+            "$$hashKey": "object:86",
+            "selected": false,
+            "text": "Faeroe Islands",
+            "value": "Faeroe Islands"
+          },
+          {
+            "$$hashKey": "object:87",
+            "selected": false,
+            "text": "Fiji",
+            "value": "Fiji"
+          },
+          {
+            "$$hashKey": "object:88",
+            "selected": false,
+            "text": "Finland",
+            "value": "Finland"
+          },
+          {
+            "$$hashKey": "object:89",
+            "selected": true,
+            "text": "France",
+            "value": "France"
+          },
+          {
+            "$$hashKey": "object:90",
+            "selected": false,
+            "text": "French Polynesia",
+            "value": "French Polynesia"
+          },
+          {
+            "$$hashKey": "object:91",
+            "selected": false,
+            "text": "Gabon",
+            "value": "Gabon"
+          },
+          {
+            "$$hashKey": "object:92",
+            "selected": false,
+            "text": "Gambia",
+            "value": "Gambia"
+          },
+          {
+            "$$hashKey": "object:93",
+            "selected": false,
+            "text": "Georgia",
+            "value": "Georgia"
+          },
+          {
+            "$$hashKey": "object:94",
+            "selected": true,
+            "text": "Germany",
+            "value": "Germany"
+          },
+          {
+            "$$hashKey": "object:95",
+            "selected": false,
+            "text": "Ghana",
+            "value": "Ghana"
+          },
+          {
+            "$$hashKey": "object:96",
+            "selected": false,
+            "text": "Gibraltar",
+            "value": "Gibraltar"
+          },
+          {
+            "$$hashKey": "object:97",
+            "selected": true,
+            "text": "Greece",
+            "value": "Greece"
+          },
+          {
+            "$$hashKey": "object:98",
+            "selected": false,
+            "text": "Greenland",
+            "value": "Greenland"
+          },
+          {
+            "$$hashKey": "object:99",
+            "selected": false,
+            "text": "Guam",
+            "value": "Guam"
+          },
+          {
+            "$$hashKey": "object:100",
+            "selected": false,
+            "text": "Guatemala",
+            "value": "Guatemala"
+          },
+          {
+            "$$hashKey": "object:101",
+            "selected": false,
+            "text": "Guernsey",
+            "value": "Guernsey"
+          },
+          {
+            "$$hashKey": "object:102",
+            "selected": false,
+            "text": "Guinea",
+            "value": "Guinea"
+          },
+          {
+            "$$hashKey": "object:103",
+            "selected": false,
+            "text": "Guyana",
+            "value": "Guyana"
+          },
+          {
+            "$$hashKey": "object:104",
+            "selected": false,
+            "text": "Haiti",
+            "value": "Haiti"
+          },
+          {
+            "$$hashKey": "object:105",
+            "selected": false,
+            "text": "Honduras",
+            "value": "Honduras"
+          },
+          {
+            "$$hashKey": "object:106",
+            "selected": false,
+            "text": "Hungary",
+            "value": "Hungary"
+          },
+          {
+            "$$hashKey": "object:107",
+            "selected": false,
+            "text": "Iceland",
+            "value": "Iceland"
+          },
+          {
+            "$$hashKey": "object:108",
+            "selected": false,
+            "text": "India",
+            "value": "India"
+          },
+          {
+            "$$hashKey": "object:109",
+            "selected": false,
+            "text": "Indonesia",
+            "value": "Indonesia"
+          },
+          {
+            "$$hashKey": "object:110",
+            "selected": false,
+            "text": "International",
+            "value": "International"
+          },
+          {
+            "$$hashKey": "object:111",
+            "selected": false,
+            "text": "Iran",
+            "value": "Iran"
+          },
+          {
+            "$$hashKey": "object:112",
+            "selected": false,
+            "text": "Iraq",
+            "value": "Iraq"
+          },
+          {
+            "$$hashKey": "object:113",
+            "selected": true,
+            "text": "Ireland",
+            "value": "Ireland"
+          },
+          {
+            "$$hashKey": "object:114",
+            "selected": false,
+            "text": "Isle of Man",
+            "value": "Isle of Man"
+          },
+          {
+            "$$hashKey": "object:115",
+            "selected": false,
+            "text": "Israel",
+            "value": "Israel"
+          },
+          {
+            "$$hashKey": "object:116",
+            "selected": false,
+            "text": "Italy",
+            "value": "Italy"
+          },
+          {
+            "$$hashKey": "object:117",
+            "selected": false,
+            "text": "Jamaica",
+            "value": "Jamaica"
+          },
+          {
+            "$$hashKey": "object:118",
+            "selected": false,
+            "text": "Japan",
+            "value": "Japan"
+          },
+          {
+            "$$hashKey": "object:119",
+            "selected": false,
+            "text": "Jersey",
+            "value": "Jersey"
+          },
+          {
+            "$$hashKey": "object:120",
+            "selected": false,
+            "text": "Jordan",
+            "value": "Jordan"
+          },
+          {
+            "$$hashKey": "object:121",
+            "selected": false,
+            "text": "Kazakhstan",
+            "value": "Kazakhstan"
+          },
+          {
+            "$$hashKey": "object:122",
+            "selected": false,
+            "text": "Kenya",
+            "value": "Kenya"
+          },
+          {
+            "$$hashKey": "object:123",
+            "selected": false,
+            "text": "Kosovo",
+            "value": "Kosovo"
+          },
+          {
+            "$$hashKey": "object:124",
+            "selected": false,
+            "text": "Kuwait",
+            "value": "Kuwait"
+          },
+          {
+            "$$hashKey": "object:125",
+            "selected": false,
+            "text": "Kyrgyzstan",
+            "value": "Kyrgyzstan"
+          },
+          {
+            "$$hashKey": "object:126",
+            "selected": false,
+            "text": "Latvia",
+            "value": "Latvia"
+          },
+          {
+            "$$hashKey": "object:127",
+            "selected": false,
+            "text": "Lebanon",
+            "value": "Lebanon"
+          },
+          {
+            "$$hashKey": "object:128",
+            "selected": false,
+            "text": "Liberia",
+            "value": "Liberia"
+          },
+          {
+            "$$hashKey": "object:129",
+            "selected": false,
+            "text": "Liechtenstein",
+            "value": "Liechtenstein"
+          },
+          {
+            "$$hashKey": "object:130",
+            "selected": false,
+            "text": "Lithuania",
+            "value": "Lithuania"
+          },
+          {
+            "$$hashKey": "object:131",
+            "selected": false,
+            "text": "Luxembourg",
+            "value": "Luxembourg"
+          },
+          {
+            "$$hashKey": "object:132",
+            "selected": false,
+            "text": "Macedonia",
+            "value": "Macedonia"
+          },
+          {
+            "$$hashKey": "object:133",
+            "selected": false,
+            "text": "Madagascar",
+            "value": "Madagascar"
+          },
+          {
+            "$$hashKey": "object:134",
+            "selected": false,
+            "text": "Malaysia",
+            "value": "Malaysia"
+          },
+          {
+            "$$hashKey": "object:135",
+            "selected": false,
+            "text": "Maldives",
+            "value": "Maldives"
+          },
+          {
+            "$$hashKey": "object:136",
+            "selected": false,
+            "text": "Malta",
+            "value": "Malta"
+          },
+          {
+            "$$hashKey": "object:137",
+            "selected": false,
+            "text": "Mauritania",
+            "value": "Mauritania"
+          },
+          {
+            "$$hashKey": "object:138",
+            "selected": false,
+            "text": "Mauritius",
+            "value": "Mauritius"
+          },
+          {
+            "$$hashKey": "object:139",
+            "selected": false,
+            "text": "Mexico",
+            "value": "Mexico"
+          },
+          {
+            "$$hashKey": "object:140",
+            "selected": false,
+            "text": "Moldova",
+            "value": "Moldova"
+          },
+          {
+            "$$hashKey": "object:141",
+            "selected": false,
+            "text": "Monaco",
+            "value": "Monaco"
+          },
+          {
+            "$$hashKey": "object:142",
+            "selected": false,
+            "text": "Mongolia",
+            "value": "Mongolia"
+          },
+          {
+            "$$hashKey": "object:143",
+            "selected": false,
+            "text": "Montenegro",
+            "value": "Montenegro"
+          },
+          {
+            "$$hashKey": "object:144",
+            "selected": false,
+            "text": "Montserrat",
+            "value": "Montserrat"
+          },
+          {
+            "$$hashKey": "object:145",
+            "selected": false,
+            "text": "Morocco",
+            "value": "Morocco"
+          },
+          {
+            "$$hashKey": "object:146",
+            "selected": false,
+            "text": "Myanmar",
+            "value": "Myanmar"
+          },
+          {
+            "$$hashKey": "object:147",
+            "selected": false,
+            "text": "Namibia",
+            "value": "Namibia"
+          },
+          {
+            "$$hashKey": "object:148",
+            "selected": false,
+            "text": "Nepal",
+            "value": "Nepal"
+          },
+          {
+            "$$hashKey": "object:149",
+            "selected": true,
+            "text": "Netherlands",
+            "value": "Netherlands"
+          },
+          {
+            "$$hashKey": "object:150",
+            "selected": false,
+            "text": "Netherlands Antilles",
+            "value": "Netherlands Antilles"
+          },
+          {
+            "$$hashKey": "object:151",
+            "selected": false,
+            "text": "New Caledonia",
+            "value": "New Caledonia"
+          },
+          {
+            "$$hashKey": "object:152",
+            "selected": false,
+            "text": "New Zealand",
+            "value": "New Zealand"
+          },
+          {
+            "$$hashKey": "object:153",
+            "selected": false,
+            "text": "Nicaragua",
+            "value": "Nicaragua"
+          },
+          {
+            "$$hashKey": "object:154",
+            "selected": false,
+            "text": "Niger",
+            "value": "Niger"
+          },
+          {
+            "$$hashKey": "object:155",
+            "selected": false,
+            "text": "Nigeria",
+            "value": "Nigeria"
+          },
+          {
+            "$$hashKey": "object:156",
+            "selected": false,
+            "text": "Norway",
+            "value": "Norway"
+          },
+          {
+            "$$hashKey": "object:157",
+            "selected": false,
+            "text": "Oman",
+            "value": "Oman"
+          },
+          {
+            "$$hashKey": "object:158",
+            "selected": false,
+            "text": "Pakistan",
+            "value": "Pakistan"
+          },
+          {
+            "$$hashKey": "object:159",
+            "selected": false,
+            "text": "Palestine",
+            "value": "Palestine"
+          },
+          {
+            "$$hashKey": "object:160",
+            "selected": false,
+            "text": "Panama",
+            "value": "Panama"
+          },
+          {
+            "$$hashKey": "object:161",
+            "selected": false,
+            "text": "Papua New Guinea",
+            "value": "Papua New Guinea"
+          },
+          {
+            "$$hashKey": "object:162",
+            "selected": false,
+            "text": "Paraguay",
+            "value": "Paraguay"
+          },
+          {
+            "$$hashKey": "object:163",
+            "selected": false,
+            "text": "Peru",
+            "value": "Peru"
+          },
+          {
+            "$$hashKey": "object:164",
+            "selected": false,
+            "text": "Philippines",
+            "value": "Philippines"
+          },
+          {
+            "$$hashKey": "object:165",
+            "selected": false,
+            "text": "Poland",
+            "value": "Poland"
+          },
+          {
+            "$$hashKey": "object:166",
+            "selected": false,
+            "text": "Portugal",
+            "value": "Portugal"
+          },
+          {
+            "$$hashKey": "object:167",
+            "selected": false,
+            "text": "Qatar",
+            "value": "Qatar"
+          },
+          {
+            "$$hashKey": "object:168",
+            "selected": false,
+            "text": "Romania",
+            "value": "Romania"
+          },
+          {
+            "$$hashKey": "object:169",
+            "selected": false,
+            "text": "Russia",
+            "value": "Russia"
+          },
+          {
+            "$$hashKey": "object:170",
+            "selected": false,
+            "text": "Rwanda",
+            "value": "Rwanda"
+          },
+          {
+            "$$hashKey": "object:171",
+            "selected": false,
+            "text": "Saint Lucia",
+            "value": "Saint Lucia"
+          },
+          {
+            "$$hashKey": "object:172",
+            "selected": false,
+            "text": "Saint Vincent and the Grenadines",
+            "value": "Saint Vincent and the Grenadines"
+          },
+          {
+            "$$hashKey": "object:173",
+            "selected": false,
+            "text": "San Marino",
+            "value": "San Marino"
+          },
+          {
+            "$$hashKey": "object:174",
+            "selected": false,
+            "text": "Saudi Arabia",
+            "value": "Saudi Arabia"
+          },
+          {
+            "$$hashKey": "object:175",
+            "selected": false,
+            "text": "Senegal",
+            "value": "Senegal"
+          },
+          {
+            "$$hashKey": "object:176",
+            "selected": false,
+            "text": "Serbia",
+            "value": "Serbia"
+          },
+          {
+            "$$hashKey": "object:177",
+            "selected": false,
+            "text": "Seychelles",
+            "value": "Seychelles"
+          },
+          {
+            "$$hashKey": "object:178",
+            "selected": false,
+            "text": "Singapore",
+            "value": "Singapore"
+          },
+          {
+            "$$hashKey": "object:179",
+            "selected": false,
+            "text": "Slovakia",
+            "value": "Slovakia"
+          },
+          {
+            "$$hashKey": "object:180",
+            "selected": false,
+            "text": "Slovenia",
+            "value": "Slovenia"
+          },
+          {
+            "$$hashKey": "object:181",
+            "selected": false,
+            "text": "Somalia",
+            "value": "Somalia"
+          },
+          {
+            "$$hashKey": "object:182",
+            "selected": false,
+            "text": "South Africa",
+            "value": "South Africa"
+          },
+          {
+            "$$hashKey": "object:183",
+            "selected": false,
+            "text": "South Korea",
+            "value": "South Korea"
+          },
+          {
+            "$$hashKey": "object:184",
+            "selected": false,
+            "text": "Spain",
+            "value": "Spain"
+          },
+          {
+            "$$hashKey": "object:185",
+            "selected": false,
+            "text": "Sri Lanka",
+            "value": "Sri Lanka"
+          },
+          {
+            "$$hashKey": "object:186",
+            "selected": false,
+            "text": "Sudan",
+            "value": "Sudan"
+          },
+          {
+            "$$hashKey": "object:187",
+            "selected": false,
+            "text": "Suriname",
+            "value": "Suriname"
+          },
+          {
+            "$$hashKey": "object:188",
+            "selected": false,
+            "text": "Swaziland",
+            "value": "Swaziland"
+          },
+          {
+            "$$hashKey": "object:189",
+            "selected": false,
+            "text": "Sweden",
+            "value": "Sweden"
+          },
+          {
+            "$$hashKey": "object:190",
+            "selected": false,
+            "text": "Switzerland",
+            "value": "Switzerland"
+          },
+          {
+            "$$hashKey": "object:191",
+            "selected": false,
+            "text": "Taiwan",
+            "value": "Taiwan"
+          },
+          {
+            "$$hashKey": "object:192",
+            "selected": false,
+            "text": "Tanzania",
+            "value": "Tanzania"
+          },
+          {
+            "$$hashKey": "object:193",
+            "selected": false,
+            "text": "Thailand",
+            "value": "Thailand"
+          },
+          {
+            "$$hashKey": "object:194",
+            "selected": false,
+            "text": "Timor",
+            "value": "Timor"
+          },
+          {
+            "$$hashKey": "object:195",
+            "selected": false,
+            "text": "Togo",
+            "value": "Togo"
+          },
+          {
+            "$$hashKey": "object:196",
+            "selected": false,
+            "text": "Trinidad and Tobago",
+            "value": "Trinidad and Tobago"
+          },
+          {
+            "$$hashKey": "object:197",
+            "selected": false,
+            "text": "Tunisia",
+            "value": "Tunisia"
+          },
+          {
+            "$$hashKey": "object:198",
+            "selected": false,
+            "text": "Turkey",
+            "value": "Turkey"
+          },
+          {
+            "$$hashKey": "object:199",
+            "selected": false,
+            "text": "Uganda",
+            "value": "Uganda"
+          },
+          {
+            "$$hashKey": "object:200",
+            "selected": false,
+            "text": "Ukraine",
+            "value": "Ukraine"
+          },
+          {
+            "$$hashKey": "object:201",
+            "selected": false,
+            "text": "United Arab Emirates",
+            "value": "United Arab Emirates"
+          },
+          {
+            "$$hashKey": "object:202",
+            "selected": true,
+            "text": "United Kingdom",
+            "value": "United Kingdom"
+          },
+          {
+            "$$hashKey": "object:203",
+            "selected": false,
+            "text": "United States",
+            "value": "United States"
+          },
+          {
+            "$$hashKey": "object:204",
+            "selected": false,
+            "text": "Uruguay",
+            "value": "Uruguay"
+          },
+          {
+            "$$hashKey": "object:205",
+            "selected": false,
+            "text": "Uzbekistan",
+            "value": "Uzbekistan"
+          },
+          {
+            "$$hashKey": "object:206",
+            "selected": false,
+            "text": "Vatican",
+            "value": "Vatican"
+          },
+          {
+            "$$hashKey": "object:207",
+            "selected": false,
+            "text": "Venezuela",
+            "value": "Venezuela"
+          },
+          {
+            "$$hashKey": "object:208",
+            "selected": false,
+            "text": "Vietnam",
+            "value": "Vietnam"
+          },
+          {
+            "$$hashKey": "object:209",
+            "selected": false,
+            "text": "World",
+            "value": "World"
+          },
+          {
+            "$$hashKey": "object:210",
+            "selected": false,
+            "text": "Zambia",
+            "value": "Zambia"
+          },
+          {
+            "$$hashKey": "object:211",
+            "selected": false,
+            "text": "Zimbabwe",
+            "value": "Zimbabwe"
+          }
+        ],
+        "query": "show tag values from value with key = \"location\"",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
+  },
+  "time": {
+    "from": "now-7d",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "",
+  "title": "COVID-19",
+  "uid": "lQzRYGrWk",
+  "variables": {
+    "list": []
+  },
+  "version": 14
+}
