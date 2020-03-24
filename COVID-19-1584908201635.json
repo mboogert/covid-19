@@ -17,7 +17,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 1,
-  "iteration": 1584907714044,
+  "iteration": 1585052997798,
   "links": [],
   "panels": [
     {
@@ -486,7 +486,7 @@
           "groupBy": [
             {
               "params": [
-                "$__interval"
+                "24h"
               ],
               "type": "time"
             },
@@ -498,7 +498,7 @@
             },
             {
               "params": [
-                "previous"
+                "0"
               ],
               "type": "fill"
             }
@@ -628,7 +628,7 @@
           "groupBy": [
             {
               "params": [
-                "$__interval"
+                "24h"
               ],
               "type": "time"
             },
@@ -640,7 +640,7 @@
             },
             {
               "params": [
-                "previous"
+                "0"
               ],
               "type": "fill"
             }
@@ -770,7 +770,7 @@
           "groupBy": [
             {
               "params": [
-                "$__interval"
+                "24h"
               ],
               "type": "time"
             },
@@ -782,7 +782,7 @@
             },
             {
               "params": [
-                "previous"
+                "0"
               ],
               "type": "fill"
             }
@@ -912,7 +912,7 @@
           "groupBy": [
             {
               "params": [
-                "$__interval"
+                "24h"
               ],
               "type": "time"
             },
@@ -924,7 +924,7 @@
             },
             {
               "params": [
-                "previous"
+                "0"
               ],
               "type": "fill"
             }
@@ -1010,14 +1010,16 @@
       {
         "allValue": null,
         "current": {
-          "text": "Belgium + France + Germany + Greece + Ireland + Netherlands + United Kingdom",
+          "text": "Belgium + France + Germany + Greece + Ireland + Italy + Netherlands + Spain + United Kingdom",
           "value": [
             "Belgium",
             "France",
             "Germany",
             "Greece",
             "Ireland",
+            "Italy",
             "Netherlands",
+            "Spain",
             "United Kingdom"
           ]
         },
@@ -1542,7 +1544,7 @@
           },
           {
             "$$hashKey": "object:116",
-            "selected": false,
+            "selected": true,
             "text": "Italy",
             "value": "Italy"
           },
@@ -1950,7 +1952,7 @@
           },
           {
             "$$hashKey": "object:184",
-            "selected": false,
+            "selected": true,
             "text": "Spain",
             "value": "Spain"
           },
@@ -2154,5 +2156,5 @@
   "variables": {
     "list": []
   },
-  "version": 14
+  "version": 6
 }
